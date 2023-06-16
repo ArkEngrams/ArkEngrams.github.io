@@ -1,0 +1,3432 @@
+<html style=""><head>
+    <title>Tek Engrams by Boss</title>
+    <style>
+      body {
+        background-color: #0b0b0b;
+        color: white;
+      }
+      a {color: #9acd32;}
+      table, tbody, tr, td {border: thin solid#854d4d}
+      .im {
+        filter: invert(100%);
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 30;
+        height: 30;
+      }
+      .ims {
+        filter: invert(100%);
+        width: 30;
+        height: 30;
+      }
+      .iconz{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .cell-green::before{
+        color:green;
+        content: "Gamma";
+      }
+      .cell-yellow::before{
+        color:rgb(206, 206, 47);
+        content: "Beta";
+      }
+      .cell-pink::before{
+        color:rgb(238, 0, 40);
+        content: "Alpha";
+      }
+      .cell-special::before{
+        color:rgb(156, 156, 156);
+        content: "Special";
+      }
+      .headerSort{
+        font-weight: bolder;
+      }
+      tr:hover {
+      background-color: rgb(35, 14, 14);
+      }
+      input[type=checkbox]{transform:scale(1.5); margin:0px 10px 10px;}
+.accent{accent-color: #222222; }
+.accent:not(:checked){opacity:0.2;}
+    </style>
+    <script>
+      function toggleBuilding() {
+        var row = -9;
+        var buildingRows = document.getElementsByClassName("building");
+
+        for (var i = 0; i < buildingRows.length; i++) {
+          var row = buildingRows[i];
+          if (row.style.display === "none") {
+            row.style.display = "";
+          } else {
+            row.style.display = "none";
+          }
+        }
+      };
+
+      function toggleUseful() {
+        var checkbox1 = document.querySelector('input[name="checkbox1"]');
+      var checkbox2 = document.querySelector('input[name="checkbox2"]');
+      var nonUsefulRows = document.querySelectorAll('tbody > tr:not(.useful)');
+
+      if (checkbox2.checked) {
+          for (var i = 0; i < nonUsefulRows.length; i++) {
+            var row = nonUsefulRows[i];
+            row.style.display = "none"; // Hide non-useful rows
+          }
+      } else {
+        if(checkbox1.checked) {
+          var nonbuildingRows = document.querySelectorAll('tbody > tr:not(.building)');
+          for (var i = 0; i < nonbuildingRows.length; i++) {
+            var row = nonbuildingRows[i];
+            row.style.display = ""; // Show non-building rows
+          }
+        }
+        else {
+          for (var i = 0; i < nonUsefulRows.length; i++) {
+            var row = nonUsefulRows[i];
+            row.style.display = ""; // Show non-useful rows
+          }
+        }
+      }
+      };
+    </script>
+  </head>
+  <body class="vsc-initialized">
+  <table class="sortable wikitable jquery-tablesorter" style="text-align:center;">
+  <thead><tr>
+  <th rowspan="3" class="headerSort" tabindex="0" role="columnheader button" ><a href="https://ark.wiki.gg/wiki/Tekgrams" class="mw-redirect" title="Tekgrams">Tekgrams</a> <br><br>
+    <label class="checkbox-label">
+      <input type="checkbox" class="accent" onclick="toggleBuilding()" name="checkbox1">
+      Hide Building/Saddles
+    </label>
+    <br>
+    <label class="checkbox-label">
+      <input type="checkbox" class="accent" onclick="toggleUseful()" name="checkbox2">
+      Show Useful Engrams
+    </label>
+  </th></tr><tr>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Broodmother_Lysrix" title="Broodmother Lysrix"><img alt="" src="https://ark.wiki.gg/images/thumb/1/19/Broodmother.png/50px-Broodmother.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Broodmother_Lysrix" title="Broodmother Lysrix">Broodmother Lysrix</a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Megapithecus" title="Megapithecus"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7d/Megapithecus.png/50px-Megapithecus.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megapithecus" title="Megapithecus">Megapithecus</a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Dragon" title="Dragon"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c7/Dragon.png/50px-Dragon.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Dragon" title="Dragon">Dragon</a>
+  </th>
+  
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Manticore" title="Manticore"><img alt="" src="https://ark.wiki.gg/images/thumb/0/03/Manticore.png/50px-Manticore.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Manticore" title="Manticore">Manticore</a> <a href="https://ark.wiki.gg/wiki/Scorched_Earth" title="Scorched Earth"><img alt="Scorched Earth" src="https://ark.wiki.gg/images/8/85/Scorched_Earth_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Dragon" title="Dragon"><img alt="Dragon.png" src="https://ark.wiki.gg/images/thumb/c/c7/Dragon.png/50px-Dragon.png" decoding="async" loading="lazy" class="ims"></a>+<a href="https://ark.wiki.gg/wiki/Manticore" title="Manticore"><img alt="Manticore.png" src="https://ark.wiki.gg/images/thumb/0/03/Manticore.png/50px-Manticore.png" decoding="async" loading="lazy" class="ims"></a> <a href="https://ark.wiki.gg/wiki/Ragnarok_Arena" class="iconz" title="Ragnarok Arena">Ragnarok Arena</a> <a href="https://ark.wiki.gg/wiki/Ragnarok" title="Ragnarok"><img alt="Ragnarok" src="https://ark.wiki.gg/images/e/ee/Ragnarok_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Rockwell" title="Rockwell"><img alt="" src="https://ark.wiki.gg/images/thumb/b/b0/Rockwell.png/50px-Rockwell.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Rockwell" title="Rockwell">Rockwell</a> <a href="https://ark.wiki.gg/wiki/Aberration" title="Aberration"><img alt="Aberration" src="https://ark.wiki.gg/images/b/bb/Aberration_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Desert_Titan" title="Desert Titan"><img alt="" src="https://ark.wiki.gg/images/thumb/4/49/Desert_Titan.png/50px-Desert_Titan.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Desert_Titan" title="Desert Titan">Desert Titan</a> <a href="https://ark.wiki.gg/wiki/Extinction" title="Extinction"><img alt="Extinction" src="https://ark.wiki.gg/images/a/ad/Extinction_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Forest_Titan" title="Forest Titan"><img alt="" src="https://ark.wiki.gg/images/thumb/2/28/Forest_Titan.png/50px-Forest_Titan.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Forest_Titan" title="Forest Titan">Forest Titan</a> <a href="https://ark.wiki.gg/wiki/Extinction" title="Extinction"><img alt="Extinction" src="https://ark.wiki.gg/images/a/ad/Extinction_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Ice_Titan" title="Ice Titan"><img alt="" src="https://ark.wiki.gg/images/thumb/d/dc/Ice_Titan.png/50px-Ice_Titan.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Ice_Titan" title="Ice Titan">Ice Titan</a> <a href="https://ark.wiki.gg/wiki/Extinction" title="Extinction"><img alt="Extinction" src="https://ark.wiki.gg/images/a/ad/Extinction_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Moeder" title="Moeder"><img alt="" src="https://ark.wiki.gg/images/thumb/b/bd/Moeder%2C_Master_of_the_Ocean.png/50px-Moeder%2C_Master_of_the_Ocean.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Moeder" class="mw-redirect" title="Moeder">Moeder</a> <a href="https://ark.wiki.gg/wiki/Genesis:_Part_1" title="Genesis: Part 1"><img alt="Genesis: Part 1" src="https://ark.wiki.gg/images/e/e6/Genesis_Part_1_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Corrupted_Master_Controller" title="Corrupted Master Controller"><img alt="" src="https://ark.wiki.gg/images/thumb/8/83/Corrupted_Master_Controller.png/50px-Corrupted_Master_Controller.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Corrupted_Master_Controller" title="Corrupted Master Controller">Corrupted Master Controller</a> <a href="https://ark.wiki.gg/wiki/Genesis:_Part_1" title="Genesis: Part 1"><img alt="Genesis: Part 1" src="https://ark.wiki.gg/images/e/e6/Genesis_Part_1_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  
+  <th colspan="3"><a href="https://ark.wiki.gg/wiki/Rockwell_Prime" title="Rockwell Prime"><img alt="" src="https://ark.wiki.gg/images/thumb/c/cc/Rockwell_Prime.png/50px-Rockwell_Prime.png" decoding="async" loading="lazy" class="im"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Rockwell_Prime" title="Rockwell Prime">Rockwell Prime</a> <a href="https://ark.wiki.gg/wiki/Genesis:_Part_2" title="Genesis: Part 2"><img alt="Genesis: Part 2" src="https://ark.wiki.gg/images/8/8a/Genesis_Part_2_Icon.png" decoding="async" loading="lazy" class="iconz" data-file-width="16" data-file-height="16"></a>
+  </th>
+  
+  </tr><tr>
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  
+  
+  
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-special headerSort" colspan="3" class="headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-special headerSort" colspan="3" class="headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-special headerSort" colspan="3" class="headerSort" tabindex="0" role="columnheader button" ></th>
+  
+  
+  
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  
+  
+  
+  <th class="cell-green headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-yellow headerSort" tabindex="0" role="columnheader button" ></th>
+  <th class="cell-pink headerSort" tabindex="0" role="columnheader button" ></th>
+  
+  
+  
+  
+  
+  </tr></thead><tbody>
+  
+  
+  <tr class="useful">
+  <td style="text-align:left;">Required Level</td>
+  <td id="Column 1">30</td>
+  <td id="Column 1">50</td>
+  <td id="Column 1">70</td>
+  <td id="Column 2">45</td>
+  <td id="Column 2">65</td>
+  <td id="Column 2">85</td>
+  <td id="Column 3">55</td>
+  <td id="Column 3">75</td>
+  <td id="Column 3">100</td>
+  
+  
+  
+  <td id="Column 5">55</td>
+  <td id="Column 5">70</td>
+  <td id="Column 5">95</td>
+  <td id="Column 6">70</td>
+  <td id="Column 6">80</td>
+  <td id="Column 6">90</td>
+  <td id="Column 7">60</td>
+  <td id="Column 7">75</td>
+  <td id="Column 7">100</td>
+  <td colspan="3" id="Column 8">1</td>
+  <td colspan="3" id="Column 8">1</td>
+  <td colspan="3" id="Column 8">1</td>
+  
+  
+  
+  <td id="Column 10">1</td>
+  <td id="Column 10">1</td>
+  <td id="Column 10">1</td>
+  <td id="Column 11">1</td>
+  <td id="Column 11">1</td>
+  <td id="Column 11">1</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;"><a href="https://ark.wiki.gg/wiki/Element" title="Element"><img alt="" src="https://ark.wiki.gg/images/thumb/a/a5/Element.png/20px-Element.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Element" title="Element">Element</a></td>
+  <td id="Column 1">20</td>
+  <td id="Column 1">56</td>
+  <td id="Column 1">148</td>
+  <td id="Column 2">40</td>
+  <td id="Column 2">110</td>
+  <td id="Column 2">220</td>
+  <td id="Column 3">80</td>
+  <td id="Column 3">220</td>
+  <td id="Column 3">440</td>
+  
+  
+  
+  <td id="Column 5">38</td>
+  <td id="Column 5">135</td>
+  <td id="Column 5">285</td>
+  <td id="Column 6">65</td>
+  <td id="Column 6">200</td>
+  <td id="Column 6">410</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Astrocetus_Tek_Saddle" title="Astrocetus Tek Saddle"><img alt="" src="https://ark.wiki.gg/images/thumb/2/29/Astrocetus_Tek_Saddle.png/20px-Astrocetus_Tek_Saddle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Astrocetus_Tek_Saddle" title="Astrocetus Tek Saddle">Astrocetus Tek Saddle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Behemoth_Tek_Gate" title="Behemoth Tek Gate"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e7/Behemoth_Tek_Gate.png/20px-Behemoth_Tek_Gate.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Behemoth_Tek_Gate" title="Behemoth Tek Gate">Behemoth Tek Gate</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Behemoth_Tek_Gateway" title="Behemoth Tek Gateway"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c2/Behemoth_Tek_Gateway.png/20px-Behemoth_Tek_Gateway.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Behemoth_Tek_Gateway" title="Behemoth Tek Gateway">Behemoth Tek Gateway</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Cloning_Chamber" title="Cloning Chamber"><img alt="" src="https://ark.wiki.gg/images/thumb/f/f1/Cloning_Chamber.png/20px-Cloning_Chamber.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Cloning_Chamber" title="Cloning Chamber">Cloning Chamber</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Cruise_Missile" title="Cruise Missile"><img alt="" src="https://ark.wiki.gg/images/thumb/f/f7/Cruise_Missile.png/20px-Cruise_Missile.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Cruise_Missile" title="Cruise Missile">Cruise Missile</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Large_Tek_Wall" title="Large Tek Wall"><img alt="" src="https://ark.wiki.gg/images/thumb/4/44/Large_Tek_Wall.png/20px-Large_Tek_Wall.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Large_Tek_Wall" title="Large Tek Wall">Large Tek Wall</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Megalodon_Tek_Saddle" title="Megalodon Tek Saddle"><img alt="" src="https://ark.wiki.gg/images/thumb/1/10/Megalodon_Tek_Saddle.png/20px-Megalodon_Tek_Saddle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalodon_Tek_Saddle" title="Megalodon Tek Saddle">Megalodon Tek Saddle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Mosasaur_Tek_Saddle" title="Mosasaur Tek Saddle"><img alt="" src="https://ark.wiki.gg/images/thumb/e/ea/Mosasaur_Tek_Saddle.png/20px-Mosasaur_Tek_Saddle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Mosasaur_Tek_Saddle" title="Mosasaur Tek Saddle">Mosasaur Tek Saddle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Rex_Tek_Saddle" title="Rex Tek Saddle"><img alt="" src="https://ark.wiki.gg/images/thumb/9/94/Rex_Tek_Saddle.png/20px-Rex_Tek_Saddle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Rex_Tek_Saddle" title="Rex Tek Saddle">Rex Tek Saddle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Rock_Drake_Tek_Saddle" title="Rock Drake Tek Saddle"><img alt="" src="https://ark.wiki.gg/images/thumb/b/b1/Rock_Drake_Tek_Saddle.png/20px-Rock_Drake_Tek_Saddle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Rock_Drake_Tek_Saddle" title="Rock Drake Tek Saddle">Rock Drake Tek Saddle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Sloped_Tek_Roof" title="Sloped Tek Roof"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6a/Sloped_Tek_Roof.png/20px-Sloped_Tek_Roof.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sloped_Tek_Roof" title="Sloped Tek Roof">Sloped Tek Roof</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Sloped_Tek_Wall_Left" title="Sloped Tek Wall Left"><img alt="" src="https://ark.wiki.gg/images/thumb/1/17/Sloped_Tek_Wall_Left.png/20px-Sloped_Tek_Wall_Left.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sloped_Tek_Wall_Left" title="Sloped Tek Wall Left">Sloped Tek Wall Left</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Sloped_Tek_Wall_Right" title="Sloped Tek Wall Right"><img alt="" src="https://ark.wiki.gg/images/thumb/0/06/Sloped_Tek_Wall_Right.png/20px-Sloped_Tek_Wall_Right.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sloped_Tek_Wall_Right" title="Sloped Tek Wall Right">Sloped Tek Wall Right</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tapejara_Tek_Saddle" title="Tapejara Tek Saddle"><img alt="" src="https://ark.wiki.gg/images/thumb/3/3f/Tapejara_Tek_Saddle.png/20px-Tapejara_Tek_Saddle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tapejara_Tek_Saddle" title="Tapejara Tek Saddle">Tapejara Tek Saddle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Boots" title="Tek Boots"><img alt="" src="https://ark.wiki.gg/images/thumb/1/1b/Tek_Boots.png/20px-Tek_Boots.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Boots" title="Tek Boots">Tek Boots</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Catwalk" title="Tek Catwalk"><img alt="" src="https://ark.wiki.gg/images/thumb/8/8b/Tek_Catwalk.png/20px-Tek_Catwalk.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Catwalk" title="Tek Catwalk">Tek Catwalk</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Ceiling" title="Tek Ceiling"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d3/Tek_Ceiling.png/20px-Tek_Ceiling.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Ceiling" title="Tek Ceiling">Tek Ceiling</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Chestpiece" title="Tek Chestpiece"><img alt="" src="https://ark.wiki.gg/images/thumb/2/21/Tek_Chestpiece.png/20px-Tek_Chestpiece.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Chestpiece" title="Tek Chestpiece">Tek Chestpiece</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Claws" title="Tek Claws"><img alt="" src="https://ark.wiki.gg/images/thumb/3/3b/Tek_Claws.png/20px-Tek_Claws.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Claws" title="Tek Claws">Tek Claws</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Dedicated_Storage" title="Tek Dedicated Storage"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e9/Tek_Dedicated_Storage.png/20px-Tek_Dedicated_Storage.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Dedicated_Storage" title="Tek Dedicated Storage">Tek Dedicated Storage</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Dinosaur_Gate" title="Tek Dinosaur Gate"><img alt="" src="https://ark.wiki.gg/images/thumb/0/00/Tek_Dinosaur_Gate.png/20px-Tek_Dinosaur_Gate.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Dinosaur_Gate" title="Tek Dinosaur Gate">Tek Dinosaur Gate</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Dinosaur_Gateway" title="Tek Dinosaur Gateway"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6e/Tek_Dinosaur_Gateway.png/20px-Tek_Dinosaur_Gateway.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Dinosaur_Gateway" title="Tek Dinosaur Gateway">Tek Dinosaur Gateway</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Door" title="Tek Door"><img alt="" src="https://ark.wiki.gg/images/thumb/3/36/Tek_Door.png/20px-Tek_Door.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Door" title="Tek Door">Tek Door</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Doorframe" title="Tek Doorframe"><img alt="" src="https://ark.wiki.gg/images/thumb/b/b7/Tek_Doorframe.png/20px-Tek_Doorframe.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Doorframe" title="Tek Doorframe">Tek Doorframe</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Double_Door" title="Tek Double Door"><img alt="" src="https://ark.wiki.gg/images/thumb/8/84/Tek_Double_Door.png/20px-Tek_Double_Door.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Double_Door" title="Tek Double Door">Tek Double Door</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Double_Doorframe" title="Tek Double Doorframe"><img alt="" src="https://ark.wiki.gg/images/thumb/d/da/Tek_Double_Doorframe.png/20px-Tek_Double_Doorframe.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Double_Doorframe" title="Tek Double Doorframe">Tek Double Doorframe</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Fence_Foundation" title="Tek Fence Foundation"><img alt="" src="https://ark.wiki.gg/images/thumb/d/df/Tek_Fence_Foundation.png/20px-Tek_Fence_Foundation.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Fence_Foundation" title="Tek Fence Foundation">Tek Fence Foundation</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Fence_Support" title="Tek Fence Support"><img alt="" src="https://ark.wiki.gg/images/thumb/1/1a/Tek_Fence_Support.png/20px-Tek_Fence_Support.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Fence_Support" title="Tek Fence Support">Tek Fence Support</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Forcefield" title="Tek Forcefield"><img alt="" src="https://ark.wiki.gg/images/thumb/5/5a/Tek_Forcefield.png/20px-Tek_Forcefield.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Forcefield" title="Tek Forcefield">Tek Forcefield</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Foundation" title="Tek Foundation"><img alt="" src="https://ark.wiki.gg/images/thumb/8/8c/Tek_Foundation.png/20px-Tek_Foundation.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Foundation" title="Tek Foundation">Tek Foundation</a></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Gauntlets" title="Tek Gauntlets"><img alt="" src="https://ark.wiki.gg/images/thumb/2/21/Tek_Gauntlets.png/20px-Tek_Gauntlets.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Gauntlets" title="Tek Gauntlets">Tek Gauntlets</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Generator" title="Tek Generator"><img alt="" src="https://ark.wiki.gg/images/thumb/1/13/Tek_Generator.png/20px-Tek_Generator.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Generator" title="Tek Generator">Tek Generator</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Grenade" title="Tek Grenade"><img alt="" src="https://ark.wiki.gg/images/thumb/7/75/Tek_Grenade.png/20px-Tek_Grenade.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Grenade" title="Tek Grenade">Tek Grenade</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Grenade_Launcher" title="Tek Grenade Launcher"><img alt="" src="https://ark.wiki.gg/images/thumb/a/a9/Tek_Grenade_Launcher.png/20px-Tek_Grenade_Launcher.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Grenade_Launcher" title="Tek Grenade Launcher">Tek Grenade Launcher</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Hatchframe" title="Tek Hatchframe"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c7/Tek_Hatchframe.png/20px-Tek_Hatchframe.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Hatchframe" title="Tek Hatchframe">Tek Hatchframe</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Helmet" title="Tek Helmet"><img alt="" src="https://ark.wiki.gg/images/thumb/2/2e/Tek_Helmet.png/20px-Tek_Helmet.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Helmet" title="Tek Helmet">Tek Helmet</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Ladder" title="Tek Ladder"><img alt="" src="https://ark.wiki.gg/images/thumb/6/62/Tek_Ladder.png/20px-Tek_Ladder.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Ladder" title="Tek Ladder">Tek Ladder</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Leggings" title="Tek Leggings"><img alt="" src="https://ark.wiki.gg/images/thumb/0/0d/Tek_Leggings.png/20px-Tek_Leggings.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Leggings" title="Tek Leggings">Tek Leggings</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Light" title="Tek Light"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d0/Tek_Light.png/20px-Tek_Light.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Light" title="Tek Light">Tek Light</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Pillar" title="Tek Pillar"><img alt="" src="https://ark.wiki.gg/images/thumb/e/eb/Tek_Pillar.png/20px-Tek_Pillar.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Pillar" title="Tek Pillar">Tek Pillar</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Railing" title="Tek Railing"><img alt="" src="https://ark.wiki.gg/images/thumb/0/0f/Tek_Railing.png/20px-Tek_Railing.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Railing" title="Tek Railing">Tek Railing</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Ramp" title="Tek Ramp"><img alt="" src="https://ark.wiki.gg/images/thumb/1/1a/Tek_Ramp.png/20px-Tek_Ramp.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Ramp" title="Tek Ramp">Tek Ramp</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Replicator" title="Tek Replicator"><img alt="" src="https://ark.wiki.gg/images/thumb/a/a2/Tek_Replicator.png/20px-Tek_Replicator.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Replicator" title="Tek Replicator">Tek Replicator</a></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Rifle" title="Tek Rifle"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d4/Tek_Rifle.png/20px-Tek_Rifle.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Rifle" title="Tek Rifle">Tek Rifle</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Railgun" title="Tek Railgun"><img alt="" src="https://ark.wiki.gg/images/thumb/e/eb/Tek_Railgun.png/20px-Tek_Railgun.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Railgun" title="Tek Railgun">Tek Railgun</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Sensor" title="Tek Sensor"><img alt="" src="https://ark.wiki.gg/images/thumb/0/04/Tek_Sensor.png/20px-Tek_Sensor.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Sensor" title="Tek Sensor">Tek Sensor</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Shield" title="Tek Shield"><img alt="" src="https://ark.wiki.gg/images/thumb/8/85/Tek_Shield.png/20px-Tek_Shield.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Shield" title="Tek Shield">Tek Shield</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Shoulder_Cannon" title="Tek Shoulder Cannon"><img alt="" src="https://ark.wiki.gg/images/thumb/2/28/Tek_Shoulder_Cannon.png/20px-Tek_Shoulder_Cannon.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Shoulder_Cannon" title="Tek Shoulder Cannon">Tek Shoulder Cannon</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Sleeping_Pod" title="Tek Sleeping Pod"><img alt="" src="https://ark.wiki.gg/images/thumb/1/15/Tek_Sleeping_Pod.png/20px-Tek_Sleeping_Pod.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Sleeping_Pod" title="Tek Sleeping Pod">Tek Sleeping Pod</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Staircase" title="Tek Staircase"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e1/Tek_Staircase.png/20px-Tek_Staircase.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Staircase" title="Tek Staircase">Tek Staircase</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Stairs" title="Tek Stairs"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e3/Tek_Stairs.png/20px-Tek_Stairs.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Stairs" title="Tek Stairs">Tek Stairs</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Sword" title="Tek Sword"><img alt="" src="https://ark.wiki.gg/images/thumb/0/01/Tek_Sword.png/20px-Tek_Sword.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Sword" title="Tek Sword">Tek Sword</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Teleporter" title="Tek Teleporter"><img alt="" src="https://ark.wiki.gg/images/thumb/6/64/Tek_Teleporter.png/20px-Tek_Teleporter.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Teleporter" title="Tek Teleporter">Tek Teleporter</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Transmitter" title="Tek Transmitter"><img alt="" src="https://ark.wiki.gg/images/thumb/1/18/Tek_Transmitter.png/20px-Tek_Transmitter.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Transmitter" title="Tek Transmitter">Tek Transmitter</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Trapdoor" title="Tek Trapdoor"><img alt="" src="https://ark.wiki.gg/images/thumb/f/f3/Tek_Trapdoor.png/20px-Tek_Trapdoor.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Trapdoor" title="Tek Trapdoor">Tek Trapdoor</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Trough" title="Tek Trough"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d8/Tek_Trough.png/20px-Tek_Trough.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Trough" title="Tek Trough">Tek Trough</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 5">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td id="Column 7">✓</td>
+  <td colspan="3" id="Column 8">✓</td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 10">✓</td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Triangle_Ceiling" title="Tek Triangle Ceiling"><img alt="" src="https://ark.wiki.gg/images/thumb/e/ef/Tek_Triangle_Ceiling.png/20px-Tek_Triangle_Ceiling.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Triangle_Ceiling" title="Tek Triangle Ceiling">Tek Triangle Ceiling</a></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Triangle_Foundation" title="Tek Triangle Foundation"><img alt="" src="https://ark.wiki.gg/images/thumb/b/b1/Tek_Triangle_Foundation.png/20px-Tek_Triangle_Foundation.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Triangle_Foundation" title="Tek Triangle Foundation">Tek Triangle Foundation</a></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Triangle_Roof" title="Tek Triangle Roof"><img alt="" src="https://ark.wiki.gg/images/thumb/d/dc/Tek_Triangle_Roof.png/20px-Tek_Triangle_Roof.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Triangle_Roof" title="Tek Triangle Roof">Tek Triangle Roof</a></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Turret" title="Tek Turret"><img alt="" src="https://ark.wiki.gg/images/thumb/6/65/Tek_Turret.png/20px-Tek_Turret.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Turret" title="Tek Turret">Tek Turret</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Wall" title="Tek Wall"><img alt="" src="https://ark.wiki.gg/images/thumb/4/4b/Tek_Wall.png/20px-Tek_Wall.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Wall" title="Tek Wall">Tek Wall</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1">✓</td>
+  <td id="Column 1">✓</td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Window" title="Tek Window"><img alt="" src="https://ark.wiki.gg/images/thumb/0/0b/Tek_Window.png/20px-Tek_Window.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Window" title="Tek Window">Tek Window</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="building">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Tek_Windowframe" title="Tek Windowframe"><img alt="" src="https://ark.wiki.gg/images/thumb/6/63/Tek_Windowframe.png/20px-Tek_Windowframe.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tek_Windowframe" title="Tek Windowframe">Tek Windowframe</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 2">✓</td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Unassembled_Exo-Mek" title="Unassembled Exo-Mek"><img alt="" src="https://ark.wiki.gg/images/thumb/f/f7/Unassembled_Exo-Mek.png/20px-Unassembled_Exo-Mek.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Unassembled_Exo-Mek" title="Unassembled Exo-Mek">Unassembled Exo-Mek</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  <td id="Column 13">✓</td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr class="useful">
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Unassembled_TEK_Hover_Skiff" title="Unassembled TEK Hover Skiff"><img alt="" src="https://ark.wiki.gg/images/thumb/0/01/Unassembled_TEK_Hover_Skiff.png/20px-Unassembled_TEK_Hover_Skiff.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Unassembled_TEK_Hover_Skiff" title="Unassembled TEK Hover Skiff">Unassembled TEK Hover Skiff</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  <td id="Column 11">✓</td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Vacuum_Compartment" title="Vacuum Compartment"><img alt="" src="https://ark.wiki.gg/images/thumb/e/ef/Vacuum_Compartment.png/20px-Vacuum_Compartment.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Vacuum_Compartment" title="Vacuum Compartment">Vacuum Compartment</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr>
+  <tr>
+  <td style="text-align:left;white-space:nowrap;"><a href="https://ark.wiki.gg/wiki/Vacuum_Compartment_Moonpool" title="Vacuum Compartment Moonpool"><img alt="" src="https://ark.wiki.gg/images/thumb/a/a9/Vacuum_Compartment_Moonpool.png/20px-Vacuum_Compartment_Moonpool.png" decoding="async" loading="lazy" width="20" height="20"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Vacuum_Compartment_Moonpool" title="Vacuum Compartment Moonpool">Vacuum Compartment Moonpool</a></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 1"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 2"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3"></td>
+  <td id="Column 3">✓</td>
+  
+  
+  
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 5"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6"></td>
+  <td id="Column 6">✓</td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td id="Column 7"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  <td colspan="3" id="Column 8"></td>
+  
+  
+  
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 10"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  <td id="Column 11"></td>
+  
+  
+  
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  <td id="Column 13"></td>
+  
+  
+  
+  
+  
+  </tr></tbody><tfoot></tfoot></table>
+  
+  </body></html>
