@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boss Requirements</title>
+    <style>
+        body {
+        background-color: #0b0b0b;
+        color: white;
+        }
+        a {color: #9acd32;}
+        table, tbody, tr, td {border: thin solid#854d4d}
+        .im {
+        filter: invert(100%);
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 30;
+        height: 30;
+        }
+        .ims {
+        filter: invert(100%);
+        width: 30;
+        height: 30;
+        }
+        .iconz{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        }
+        .cell-green::before{
+        color:green;
+        content: "Gamma";
+        }
+        .cell-yellow::before{
+        color:rgb(206, 206, 47);
+        content: "Beta";
+        }
+        .cell-pink::before{
+        color:rgb(238, 0, 40);
+        content: "Alpha";
+        }
+        .cell-special::before{
+        color:rgb(156, 156, 156);
+        content: "Special";
+        }
+        .headerSort{
+        font-weight: bolder;
+        }
+        tr:hover {
+        background-color: rgb(35, 14, 14);
+        }
+        input[type=checkbox]{transform:scale(1.5); margin:0px 10px 10px;}
+        .accent{accent-color: #222222; }
+        .accent:not(:checked){opacity:0.2;}
+        .br {
+          color: white;
+          font-size: 20px;
+          font-family: helvetica;
+          text-decoration: none;
+          border: 2px solid #131313;
+          border-radius: 20px;
+          transition-duration: .2s;
+          -webkit-transition-duration: .2s;
+          -moz-transition-duration: .2s;
+          background-color: rgb(14, 14, 14);
+          padding: 4px 30px;
+        }
+
+        .br:hover {
+          color: #0b0b0b;
+          background-color: rgb(112, 112, 112);
+          transition-duration: .2s;
+          -webkit-transition-duration: .2s;
+          -moz-transition-duration: .2s;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1 0 20%;
+
+        }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Broodmother_Lysrix" target=”_blank”><h1>Broodmother (Island)</h1></a>
+            <table class="wikitable sortable jquery-tablesorter">
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>30</td>
+                <td>50</td>
+                <td>70
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Clever" title="Artifact of the Clever"><img alt="" src="https://ark.wiki.gg/images/thumb/8/80/Artifact_of_the_Clever.png/20px-Artifact_of_the_Clever.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Clever" title="Artifact of the Clever">Artifact of the Clever</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Hunter" title="Artifact of the Hunter"><img alt="" src="https://ark.wiki.gg/images/thumb/2/2f/Artifact_of_the_Hunter.png/20px-Artifact_of_the_Hunter.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Hunter" title="Artifact of the Hunter">Artifact of the Hunter</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Massive" title="Artifact of the Massive"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c6/Artifact_of_the_Massive.png/20px-Artifact_of_the_Massive.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Massive" title="Artifact of the Massive">Artifact of the Massive</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Argentavis_Talon" title="Argentavis Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/6/64/Argentavis_Talon.png/20px-Argentavis_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Argentavis_Talon" title="Argentavis Talon">Argentavis Talon</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c2/Sarcosuchus_Skin.png/20px-Sarcosuchus_Skin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin">Sarcosuchus Skin</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Sauropod_Vertebra.png/20px-Sauropod_Vertebra.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra">Sauropod Vertebra</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7b/Titanoboa_Venom.png/20px-Titanoboa_Venom.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom">Titanoboa Venom</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr></tbody><tfoot></tfoot></table>  
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Megapithecus" target=”_blank”><h1>Megapithecus (Island)</h1></a>
+            <table class="wikitable sortable jquery-tablesorter">
+                <thead><tr>
+                <th rowspan="2" class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item
+                </th>
+                <th colspan="3">Quantity
+                </th></tr><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                
+                <tr>
+                <td>Player Level</td>
+                <td>45</td>
+                <td>65</td>
+                <td>85
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Brute" title="Artifact of the Brute"><img alt="" src="https://ark.wiki.gg/images/thumb/4/4b/Artifact_of_the_Brute.png/20px-Artifact_of_the_Brute.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Brute" title="Artifact of the Brute">Artifact of the Brute</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devourer" title="Artifact of the Devourer"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7c/Artifact_of_the_Devourer.png/20px-Artifact_of_the_Devourer.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devourer" title="Artifact of the Devourer">Artifact of the Devourer</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Pack" title="Artifact of the Pack"><img alt="" src="https://ark.wiki.gg/images/thumb/4/41/Artifact_of_the_Pack.png/20px-Artifact_of_the_Pack.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Pack" title="Artifact of the Pack">Artifact of the Pack</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Megalania_Toxin" title="Megalania Toxin"><img alt="" src="https://ark.wiki.gg/images/thumb/4/46/Megalania_Toxin.png/20px-Megalania_Toxin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalania_Toxin" title="Megalania Toxin">Megalania Toxin</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Megalodon_Tooth" title="Megalodon Tooth"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6f/Megalodon_Tooth.png/20px-Megalodon_Tooth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalodon_Tooth" title="Megalodon Tooth">Megalodon Tooth</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6a/Spinosaurus_Sail.png/20px-Spinosaurus_Sail.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail">Spinosaurus Sail</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Therizino_Claws" title="Therizino Claws"><img alt="" src="https://ark.wiki.gg/images/thumb/0/0a/Therizino_Claws.png/20px-Therizino_Claws.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Therizino_Claws" title="Therizino Claws">Therizino Claws</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Thylacoleo_Hook-Claw" title="Thylacoleo Hook-Claw"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c8/Thylacoleo_Hook-Claw.png/20px-Thylacoleo_Hook-Claw.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Thylacoleo_Hook-Claw" title="Thylacoleo Hook-Claw">Thylacoleo Hook-Claw</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Dragon" target=”_blank”><h1>Dragon (Island)</h1></a>
+            <table class="wikitable sortable jquery-tablesorter">
+                <thead><tr>
+                <th rowspan="2" class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item
+                </th>
+                <th colspan="3">Quantity
+                </th></tr><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                
+                <tr>
+                <td>Player Level</td>
+                <td>55</td>
+                <td>75</td>
+                <td>100
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Cunning" title="Artifact of the Cunning"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Artifact_of_the_Cunning.png/20px-Artifact_of_the_Cunning.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Cunning" title="Artifact of the Cunning">Artifact of the Cunning</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Immune" title="Artifact of the Immune"><img alt="" src="https://ark.wiki.gg/images/thumb/2/23/Artifact_of_the_Immune.png/20px-Artifact_of_the_Immune.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Immune" title="Artifact of the Immune">Artifact of the Immune</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Skylord" title="Artifact of the Skylord"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e4/Artifact_of_the_Skylord.png/20px-Artifact_of_the_Skylord.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Skylord" title="Artifact of the Skylord">Artifact of the Skylord</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Strong" title="Artifact of the Strong"><img alt="" src="https://ark.wiki.gg/images/thumb/5/5b/Artifact_of_the_Strong.png/20px-Artifact_of_the_Strong.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Strong" title="Artifact of the Strong">Artifact of the Strong</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Allosaurus_Brain" title="Allosaurus Brain"><img alt="" src="https://ark.wiki.gg/images/thumb/9/96/Allosaurus_Brain.png/20px-Allosaurus_Brain.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Allosaurus_Brain" title="Allosaurus Brain">Allosaurus Brain</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Basilosaurus_Blubber" title="Basilosaurus Blubber"><img alt="" src="https://ark.wiki.gg/images/thumb/9/98/Basilosaurus_Blubber.png/20px-Basilosaurus_Blubber.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Basilosaurus_Blubber" title="Basilosaurus Blubber">Basilosaurus Blubber</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Giganotosaurus_Heart" title="Giganotosaurus Heart"><img alt="" src="https://ark.wiki.gg/images/thumb/6/62/Giganotosaurus_Heart.png/20px-Giganotosaurus_Heart.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Giganotosaurus_Heart" title="Giganotosaurus Heart">Giganotosaurus Heart</a></td>
+                <td>-</td>
+                <td>1</td>
+                <td>2
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Tusoteuthis_Tentacle" title="Tusoteuthis Tentacle"><img alt="" src="https://ark.wiki.gg/images/thumb/1/10/Tusoteuthis_Tentacle.png/20px-Tusoteuthis_Tentacle.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tusoteuthis_Tentacle" title="Tusoteuthis Tentacle">Tusoteuthis Tentacle</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Tyrannosaurus_Arm" title="Tyrannosaurus Arm"><img alt="" src="https://ark.wiki.gg/images/thumb/2/2f/Tyrannosaurus_Arm.png/20px-Tyrannosaurus_Arm.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tyrannosaurus_Arm" title="Tyrannosaurus Arm">Tyrannosaurus Arm</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>15
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Yutyrannus_Lungs" title="Yutyrannus Lungs"><img alt="" src="https://ark.wiki.gg/images/thumb/e/ef/Yutyrannus_Lungs.png/20px-Yutyrannus_Lungs.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Yutyrannus_Lungs" title="Yutyrannus Lungs">Yutyrannus Lungs</a></td>
+                <td>-</td>
+                <td>5</td>
+                <td>10
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Overseer" target=”_blank”><h1 style="margin-bottom: 1px; padding-bottom: 0px;">Overseer (Island)</h1></a>
+            <h4 style="margin-top: 1px;;">Gamma Overseer unlocks Scorched Earth</h4>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>60</td>
+                <td>80</td>
+                <td>100
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Gamma_Broodmother_Trophy" title="Gamma Broodmother Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d7/Gamma_Broodmother_Trophy.png/20px-Gamma_Broodmother_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Gamma_Broodmother_Trophy" class="mw-redirect" title="Gamma Broodmother Trophy">Gamma Broodmother Trophy</a></td>
+                <td>1</td>
+                <td></td>
+                <td>
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Gamma_Megapithecus_Trophy" title="Gamma Megapithecus Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/3/38/Gamma_Megapithecus_Trophy.png/20px-Gamma_Megapithecus_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Gamma_Megapithecus_Trophy" class="mw-redirect" title="Gamma Megapithecus Trophy">Gamma Megapithecus Trophy</a></td>
+                <td>1</td>
+                <td></td>
+                <td>
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Gamma_Dragon_Trophy" title="Gamma Dragon Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/e/ea/Gamma_Dragon_Trophy.png/20px-Gamma_Dragon_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Gamma_Dragon_Trophy" class="mw-redirect" title="Gamma Dragon Trophy">Gamma Dragon Trophy</a></td>
+                <td>1</td>
+                <td></td>
+                <td>
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Beta_Broodmother_Trophy" title="Beta Broodmother Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/2/27/Broodmother_Trophy.png/20px-Broodmother_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Beta_Broodmother_Trophy" class="mw-redirect" title="Beta Broodmother Trophy">Beta Broodmother Trophy</a></td>
+                <td></td>
+                <td>1</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Beta_Megapithecus_Trophy" title="Beta Megapithecus Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c3/Beta_Megapithecus_Trophy.png/20px-Beta_Megapithecus_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Beta_Megapithecus_Trophy" class="mw-redirect" title="Beta Megapithecus Trophy">Beta Megapithecus Trophy</a></td>
+                <td></td>
+                <td>1</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Beta_Dragon_Trophy" title="Beta Dragon Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/b/bf/Beta_Dragon_Trophy.png/20px-Beta_Dragon_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Beta_Dragon_Trophy" class="mw-redirect" title="Beta Dragon Trophy">Beta Dragon Trophy</a></td>
+                <td></td>
+                <td>1</td>
+                <td>
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Broodmother_Trophy" title="Alpha Broodmother Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/f/f7/Alpha_Broodmother_Trophy.png/20px-Alpha_Broodmother_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Broodmother_Trophy" class="mw-redirect" title="Alpha Broodmother Trophy">Alpha Broodmother Trophy</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Megapithecus_Trophy" title="Alpha Megapithecus Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/f/fb/Alpha_Megapithecus_Trophy.png/20px-Alpha_Megapithecus_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Megapithecus_Trophy" class="mw-redirect" title="Alpha Megapithecus Trophy">Alpha Megapithecus Trophy</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Dragon_Trophy" title="Alpha Dragon Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/8/80/Alpha_Dragon_Trophy.png/20px-Alpha_Dragon_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Dragon_Trophy" class="mw-redirect" title="Alpha Dragon Trophy">Alpha Dragon Trophy</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Raptor_Claw" title="Alpha Raptor Claw"><img alt="" src="https://ark.wiki.gg/images/thumb/d/de/Alpha_Raptor_Claw.png/20px-Alpha_Raptor_Claw.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Raptor_Claw" title="Alpha Raptor Claw">Alpha Raptor Claw</a></td>
+                <td></td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Carnotaurus_Arm" title="Alpha Carnotaurus Arm"><img alt="" src="https://ark.wiki.gg/images/thumb/e/ec/Alpha_Carnotaurus_Arm.png/20px-Alpha_Carnotaurus_Arm.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Carnotaurus_Arm" title="Alpha Carnotaurus Arm">Alpha Carnotaurus Arm</a></td>
+                <td></td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Tyrannosaur_Tooth" title="Alpha Tyrannosaur Tooth"><img alt="" src="https://ark.wiki.gg/images/thumb/3/3c/Alpha_Tyrannosaur_Tooth.png/20px-Alpha_Tyrannosaur_Tooth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Tyrannosaur_Tooth" title="Alpha Tyrannosaur Tooth">Alpha Tyrannosaur Tooth</a></td>
+                <td></td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Megalodon_Fin" title="Alpha Megalodon Fin"><img alt="" src="https://ark.wiki.gg/images/thumb/0/05/Alpha_Megalodon_Fin.png/20px-Alpha_Megalodon_Fin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Megalodon_Fin" title="Alpha Megalodon Fin">Alpha Megalodon Fin</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Mosasaur_Tooth" title="Alpha Mosasaur Tooth"><img alt="" src="https://ark.wiki.gg/images/thumb/9/99/Alpha_Mosasaur_Tooth.png/20px-Alpha_Mosasaur_Tooth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Mosasaur_Tooth" title="Alpha Mosasaur Tooth">Alpha Mosasaur Tooth</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Tusoteuthis_Eye" title="Alpha Tusoteuthis Eye"><img alt="" src="https://ark.wiki.gg/images/thumb/b/bf/Alpha_Tusoteuthis_Eye.png/20px-Alpha_Tusoteuthis_Eye.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Tusoteuthis_Eye" title="Alpha Tusoteuthis Eye">Alpha Tusoteuthis Eye</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Leedsichthys_Blubber" title="Alpha Leedsichthys Blubber"><img alt="" src="https://ark.wiki.gg/images/thumb/3/3e/Alpha_Leedsichthys_Blubber.png/20px-Alpha_Leedsichthys_Blubber.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Leedsichthys_Blubber" title="Alpha Leedsichthys Blubber">Alpha Leedsichthys Blubber</a></td>
+                <td></td>
+                <td></td>
+                <td>1
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Manticore" target=”_blank”><h1 style="margin-bottom: 1px; padding-bottom: 0px;">Manticore (Scorched Earth)</h1></a>
+            <h4 style="margin-top: 1px;;">Beta Manticore unlocks Ragnarok/Aberration</h4>
+            <table class="wikitable sortable jquery-tablesorter">
+                <thead><tr>
+                <th rowspan="2" class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item
+                </th>
+                <th colspan="3">Quantity
+                </th></tr><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                
+                <tr>
+                <td>Player Level</td>
+                <td>55</td>
+                <td>70</td>
+                <td>95
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Fire_Talon" title="Fire Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e3/Fire_Talon.png/20px-Fire_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Fire_Talon" class="mw-redirect" title="Fire Talon">Fire Talon</a></td>
+                <td>2</td>
+                <td>10</td>
+                <td>20
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Lightning_Talon" title="Lightning Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/d/da/Lightning_Talon.png/20px-Lightning_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Lightning_Talon" class="mw-redirect" title="Lightning Talon">Lightning Talon</a></td>
+                <td>2</td>
+                <td>10</td>
+                <td>20
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Poison_Talon" title="Poison Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/c/ca/Poison_Talon.png/20px-Poison_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Poison_Talon" class="mw-redirect" title="Poison Talon">Poison Talon</a></td>
+                <td>2</td>
+                <td>10</td>
+                <td>20
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Gatekeeper" title="Artifact of the Gatekeeper"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6e/Artifact_of_the_Gatekeeper.png/20px-Artifact_of_the_Gatekeeper.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Gatekeeper" title="Artifact of the Gatekeeper">Artifact of the Gatekeeper</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Crag" title="Artifact of the Crag"><img alt="" src="https://ark.wiki.gg/images/thumb/2/29/Artifact_of_the_Crag.png/20px-Artifact_of_the_Crag.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Crag" title="Artifact of the Crag">Artifact of the Crag</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Destroyer" title="Artifact of the Destroyer"><img alt="" src="https://ark.wiki.gg/images/thumb/8/8d/Artifact_of_the_Destroyer.png/20px-Artifact_of_the_Destroyer.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Destroyer" title="Artifact of the Destroyer">Artifact of the Destroyer</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Ragnarok_Arena_(Ragnarok)" target=”_blank”><h1>Ragnarok Arena (Ragnarok)</h1></a>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>70</td>
+                <td>80</td>
+                <td>90
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Argentavis_Talon" title="Argentavis Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/6/64/Argentavis_Talon.png/20px-Argentavis_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Argentavis_Talon" title="Argentavis Talon">Argentavis Talon</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Clever" title="Artifact of the Clever"><img alt="" src="https://ark.wiki.gg/images/thumb/8/80/Artifact_of_the_Clever.png/20px-Artifact_of_the_Clever.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Clever" title="Artifact of the Clever">Artifact of the Clever</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Cunning" title="Artifact of the Cunning"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Artifact_of_the_Cunning.png/20px-Artifact_of_the_Cunning.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Cunning" title="Artifact of the Cunning">Artifact of the Cunning</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devious" title="Artifact of the Devious"><img alt="" src="https://ark.wiki.gg/images/thumb/b/b4/Artifact_of_the_Devious.png/20px-Artifact_of_the_Devious.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devious" title="Artifact of the Devious">Artifact of the Devious</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devourer" title="Artifact of the Devourer"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7c/Artifact_of_the_Devourer.png/20px-Artifact_of_the_Devourer.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devourer" title="Artifact of the Devourer">Artifact of the Devourer</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Hunter" title="Artifact of the Hunter"><img alt="" src="https://ark.wiki.gg/images/thumb/2/2f/Artifact_of_the_Hunter.png/20px-Artifact_of_the_Hunter.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Hunter" title="Artifact of the Hunter">Artifact of the Hunter</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Immune" title="Artifact of the Immune"><img alt="" src="https://ark.wiki.gg/images/thumb/2/23/Artifact_of_the_Immune.png/20px-Artifact_of_the_Immune.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Immune" title="Artifact of the Immune">Artifact of the Immune</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Massive" title="Artifact of the Massive"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c6/Artifact_of_the_Massive.png/20px-Artifact_of_the_Massive.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Massive" title="Artifact of the Massive">Artifact of the Massive</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Pack" title="Artifact of the Pack"><img alt="" src="https://ark.wiki.gg/images/thumb/4/41/Artifact_of_the_Pack.png/20px-Artifact_of_the_Pack.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Pack" title="Artifact of the Pack">Artifact of the Pack</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Skylord" title="Artifact of the Skylord"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e4/Artifact_of_the_Skylord.png/20px-Artifact_of_the_Skylord.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Skylord" title="Artifact of the Skylord">Artifact of the Skylord</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Strong" title="Artifact of the Strong"><img alt="" src="https://ark.wiki.gg/images/thumb/5/5b/Artifact_of_the_Strong.png/20px-Artifact_of_the_Strong.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Strong" title="Artifact of the Strong">Artifact of the Strong</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Basilosaurus_Blubber" title="Basilosaurus Blubber"><img alt="" src="https://ark.wiki.gg/images/thumb/9/98/Basilosaurus_Blubber.png/20px-Basilosaurus_Blubber.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Basilosaurus_Blubber" title="Basilosaurus Blubber">Basilosaurus Blubber</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Megalania_Toxin" title="Megalania Toxin"><img alt="" src="https://ark.wiki.gg/images/thumb/4/46/Megalania_Toxin.png/20px-Megalania_Toxin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalania_Toxin" title="Megalania Toxin">Megalania Toxin</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Megalodon_Tooth" title="Megalodon Tooth"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6f/Megalodon_Tooth.png/20px-Megalodon_Tooth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalodon_Tooth" title="Megalodon Tooth">Megalodon Tooth</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c2/Sarcosuchus_Skin.png/20px-Sarcosuchus_Skin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin">Sarcosuchus Skin</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Sauropod_Vertebra.png/20px-Sauropod_Vertebra.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra">Sauropod Vertebra</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6a/Spinosaurus_Sail.png/20px-Spinosaurus_Sail.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail">Spinosaurus Sail</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Thylacoleo_Hook-Claw" title="Thylacoleo Hook-Claw"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c8/Thylacoleo_Hook-Claw.png/20px-Thylacoleo_Hook-Claw.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Thylacoleo_Hook-Claw" title="Thylacoleo Hook-Claw">Thylacoleo Hook-Claw</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7b/Titanoboa_Venom.png/20px-Titanoboa_Venom.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom">Titanoboa Venom</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Tusoteuthis_Tentacle" title="Tusoteuthis Tentacle"><img alt="" src="https://ark.wiki.gg/images/thumb/1/10/Tusoteuthis_Tentacle.png/20px-Tusoteuthis_Tentacle.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tusoteuthis_Tentacle" title="Tusoteuthis Tentacle">Tusoteuthis Tentacle</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr></tbody><tfoot></tfoot></table> 
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Rockwell" target=”_blank”><h1>Rockwell (Aberration)</h1></a>
+            <h4 style="margin-top: 1px;;">Beta Rockwell unlocks Extinction</h4>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>70</td>
+                <td>80</td>
+                <td>90
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Argentavis_Talon" title="Argentavis Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/6/64/Argentavis_Talon.png/20px-Argentavis_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Argentavis_Talon" title="Argentavis Talon">Argentavis Talon</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Clever" title="Artifact of the Clever"><img alt="" src="https://ark.wiki.gg/images/thumb/8/80/Artifact_of_the_Clever.png/20px-Artifact_of_the_Clever.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Clever" title="Artifact of the Clever">Artifact of the Clever</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Cunning" title="Artifact of the Cunning"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Artifact_of_the_Cunning.png/20px-Artifact_of_the_Cunning.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Cunning" title="Artifact of the Cunning">Artifact of the Cunning</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devious" title="Artifact of the Devious"><img alt="" src="https://ark.wiki.gg/images/thumb/b/b4/Artifact_of_the_Devious.png/20px-Artifact_of_the_Devious.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devious" title="Artifact of the Devious">Artifact of the Devious</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devourer" title="Artifact of the Devourer"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7c/Artifact_of_the_Devourer.png/20px-Artifact_of_the_Devourer.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Devourer" title="Artifact of the Devourer">Artifact of the Devourer</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Hunter" title="Artifact of the Hunter"><img alt="" src="https://ark.wiki.gg/images/thumb/2/2f/Artifact_of_the_Hunter.png/20px-Artifact_of_the_Hunter.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Hunter" title="Artifact of the Hunter">Artifact of the Hunter</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Immune" title="Artifact of the Immune"><img alt="" src="https://ark.wiki.gg/images/thumb/2/23/Artifact_of_the_Immune.png/20px-Artifact_of_the_Immune.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Immune" title="Artifact of the Immune">Artifact of the Immune</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Massive" title="Artifact of the Massive"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c6/Artifact_of_the_Massive.png/20px-Artifact_of_the_Massive.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Massive" title="Artifact of the Massive">Artifact of the Massive</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Pack" title="Artifact of the Pack"><img alt="" src="https://ark.wiki.gg/images/thumb/4/41/Artifact_of_the_Pack.png/20px-Artifact_of_the_Pack.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Pack" title="Artifact of the Pack">Artifact of the Pack</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Skylord" title="Artifact of the Skylord"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e4/Artifact_of_the_Skylord.png/20px-Artifact_of_the_Skylord.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Skylord" title="Artifact of the Skylord">Artifact of the Skylord</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Strong" title="Artifact of the Strong"><img alt="" src="https://ark.wiki.gg/images/thumb/5/5b/Artifact_of_the_Strong.png/20px-Artifact_of_the_Strong.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Strong" title="Artifact of the Strong">Artifact of the Strong</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Basilosaurus_Blubber" title="Basilosaurus Blubber"><img alt="" src="https://ark.wiki.gg/images/thumb/9/98/Basilosaurus_Blubber.png/20px-Basilosaurus_Blubber.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Basilosaurus_Blubber" title="Basilosaurus Blubber">Basilosaurus Blubber</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Megalania_Toxin" title="Megalania Toxin"><img alt="" src="https://ark.wiki.gg/images/thumb/4/46/Megalania_Toxin.png/20px-Megalania_Toxin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalania_Toxin" title="Megalania Toxin">Megalania Toxin</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Megalodon_Tooth" title="Megalodon Tooth"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6f/Megalodon_Tooth.png/20px-Megalodon_Tooth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Megalodon_Tooth" title="Megalodon Tooth">Megalodon Tooth</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c2/Sarcosuchus_Skin.png/20px-Sarcosuchus_Skin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin">Sarcosuchus Skin</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Sauropod_Vertebra.png/20px-Sauropod_Vertebra.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra">Sauropod Vertebra</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6a/Spinosaurus_Sail.png/20px-Spinosaurus_Sail.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail">Spinosaurus Sail</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Thylacoleo_Hook-Claw" title="Thylacoleo Hook-Claw"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c8/Thylacoleo_Hook-Claw.png/20px-Thylacoleo_Hook-Claw.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Thylacoleo_Hook-Claw" title="Thylacoleo Hook-Claw">Thylacoleo Hook-Claw</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7b/Titanoboa_Venom.png/20px-Titanoboa_Venom.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom">Titanoboa Venom</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Tusoteuthis_Tentacle" title="Tusoteuthis Tentacle"><img alt="" src="https://ark.wiki.gg/images/thumb/1/10/Tusoteuthis_Tentacle.png/20px-Tusoteuthis_Tentacle.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tusoteuthis_Tentacle" title="Tusoteuthis Tentacle">Tusoteuthis Tentacle</a></td>
+                <td>-</td>
+                <td>10</td>
+                <td>25
+                </td></tr></tbody><tfoot></tfoot></table> 
+        </div>    
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Desert_Titan" target=”_blank”><h1>Desert Titan (Extinction)</h1></a>
+            <h4 style="margin-top: 1px;;">Beating the 3 titans unlocks Genesis 1</h4>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Desert Titan
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_Chaos" title="Artifact of Chaos"><img alt="" src="https://ark.wiki.gg/images/thumb/a/ad/Artifact_of_Chaos.png/20px-Artifact_of_Chaos.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_Chaos" title="Artifact of Chaos">Artifact of Chaos</a></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d9/Corrupt_Heart.png/20px-Corrupt_Heart.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart">Corrupt Heart</a></td>
+                <td>100
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Fire_Talon" title="Fire Talon"><img alt="" src="https://ark.wiki.gg/images/thumb/e/e3/Fire_Talon.png/20px-Fire_Talon.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Fire_Talon" class="mw-redirect" title="Fire Talon">Fire Talon</a></td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c2/Sarcosuchus_Skin.png/20px-Sarcosuchus_Skin.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sarcosuchus_Skin" title="Sarcosuchus Skin">Sarcosuchus Skin</a></td>
+                <td>10
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Forest_Titan" target=”_blank”><h1>Forest Titan (Extinction)</h1></a>
+            <h4 style="margin-top: 1px;;">Beating the 3 titans unlocks Genesis 1</h4>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Forest Titan
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_Growth" title="Artifact of Growth"><img alt="" src="https://ark.wiki.gg/images/thumb/8/86/Artifact_of_Growth.png/20px-Artifact_of_Growth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_Growth" title="Artifact of Growth">Artifact of Growth</a></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d9/Corrupt_Heart.png/20px-Corrupt_Heart.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart">Corrupt Heart</a></td>
+                <td>100
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra"><img alt="" src="https://ark.wiki.gg/images/thumb/6/66/Sauropod_Vertebra.png/20px-Sauropod_Vertebra.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Sauropod_Vertebra" title="Sauropod Vertebra">Sauropod Vertebra</a></td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Tyrannosaurus_Arm" title="Tyrannosaurus Arm"><img alt="" src="https://ark.wiki.gg/images/thumb/2/2f/Tyrannosaurus_Arm.png/20px-Tyrannosaurus_Arm.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Tyrannosaurus_Arm" title="Tyrannosaurus Arm">Tyrannosaurus Arm</a></td>
+                <td>10
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Ice_Titan" target=”_blank”><h1>Ice Titan (Extinction)</h1></a>
+            <h4 style="margin-top: 1px;;">Beating the 3 titans unlocks Genesis 1</h4>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Ice Titan
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Artifact_of_the_Void" title="Artifact of the Void"><img alt="" src="https://ark.wiki.gg/images/thumb/c/cd/Artifact_of_the_Void.png/20px-Artifact_of_the_Void.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Artifact_of_the_Void" title="Artifact of the Void">Artifact of the Void</a></td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d9/Corrupt_Heart.png/20px-Corrupt_Heart.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart">Corrupt Heart</a></td>
+                <td>100
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6a/Spinosaurus_Sail.png/20px-Spinosaurus_Sail.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail">Spinosaurus Sail</a></td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Therizino_Claws" title="Therizino Claws"><img alt="" src="https://ark.wiki.gg/images/thumb/0/0a/Therizino_Claws.png/20px-Therizino_Claws.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Therizino_Claws" title="Therizino Claws">Therizino Claws</a></td>
+                <td>10
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/King_Titan_Arena_(Extinction)" target=”_blank”><h1>King Titan (Extinction)</h1></a>
+            <table class="wikitable sortable jquery-tablesorter">
+
+                <thead><tr>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Item Required</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Gamma</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Beta</th>
+                <th class="headerSort" tabindex="0" role="columnheader button" title="Sort ascending">Alpha
+                </th></tr></thead><tbody>
+                <tr>
+                <td>Player Level</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Alpha_Tyrannosaur_Tooth" title="Alpha Tyrannosaur Tooth"><img alt="" src="https://ark.wiki.gg/images/thumb/3/3c/Alpha_Tyrannosaur_Tooth.png/20px-Alpha_Tyrannosaur_Tooth.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Alpha_Tyrannosaur_Tooth" title="Alpha Tyrannosaur Tooth">Alpha Tyrannosaur Tooth</a></td>
+                <td>5</td>
+                <td>10</td>
+                <td>10
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart"><img alt="" src="https://ark.wiki.gg/images/thumb/d/d9/Corrupt_Heart.png/20px-Corrupt_Heart.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Corrupt_Heart" title="Corrupt Heart">Corrupt Heart</a></td>
+                <td>150</td>
+                <td>300</td>
+                <td>300
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Giganotosaurus_Heart" title="Giganotosaurus Heart"><img alt="" src="https://ark.wiki.gg/images/thumb/6/62/Giganotosaurus_Heart.png/20px-Giganotosaurus_Heart.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Giganotosaurus_Heart" title="Giganotosaurus Heart">Giganotosaurus Heart</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td>20
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6a/Spinosaurus_Sail.png/20px-Spinosaurus_Sail.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Spinosaurus_Sail" title="Spinosaurus Sail">Spinosaurus Sail</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td>20
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom"><img alt="" src="https://ark.wiki.gg/images/thumb/7/7b/Titanoboa_Venom.png/20px-Titanoboa_Venom.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Titanoboa_Venom" title="Titanoboa Venom">Titanoboa Venom</a></td>
+                <td>10</td>
+                <td>20</td>
+                <td>20
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Desert_Titan_Trophy" title="Desert Titan Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/a/ab/Desert_Titan_Trophy.png/20px-Desert_Titan_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Desert_Titan_Trophy" title="Desert Titan Trophy">Desert Titan Trophy</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Forest_Titan_Trophy" title="Forest Titan Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/c/c0/Forest_Titan_Trophy.png/20px-Forest_Titan_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Forest_Titan_Trophy" title="Forest Titan Trophy">Forest Titan Trophy</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/Ice_Titan_Trophy" title="Ice Titan Trophy"><img alt="" src="https://ark.wiki.gg/images/thumb/6/6e/Ice_Titan_Trophy.png/20px-Ice_Titan_Trophy.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/Ice_Titan_Trophy" title="Ice Titan Trophy">Ice Titan Trophy</a></td>
+                <td>1</td>
+                <td>1</td>
+                <td>1
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/King_Titan_Trophy_(Gamma)" title="King Titan Trophy (Gamma)"><img alt="" src="https://ark.wiki.gg/images/thumb/0/06/King_Titan_Trophy_%28Beta%29.png/20px-King_Titan_Trophy_%28Beta%29.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/King_Titan_Trophy_(Gamma)" class="mw-redirect" title="King Titan Trophy (Gamma)">King Titan Trophy (Gamma)</a></td>
+                <td>-</td>
+                <td>1</td>
+                <td>-
+                </td></tr>
+                <tr>
+                <td><a href="https://ark.wiki.gg/wiki/King_Titan_Trophy_(Beta)" title="King Titan Trophy (Beta)"><img alt="" src="https://ark.wiki.gg/images/thumb/0/06/King_Titan_Trophy_%28Beta%29.png/20px-King_Titan_Trophy_%28Beta%29.png" decoding="async" loading="lazy" width="20" height="20" class="itemlink" data-file-width="256" data-file-height="256"></a>&nbsp;<a href="https://ark.wiki.gg/wiki/King_Titan_Trophy_(Beta)" class="mw-redirect" title="King Titan Trophy (Beta)">King Titan Trophy (Beta)</a></td>
+                <td>-</td>
+                <td>-</td>
+                <td>1
+                </td></tr></tbody><tfoot></tfoot></table>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Moeder,_Master_of_the_Ocean" target=”_blank”><h1>Moeder (Genesis 1)</h1></a>
+            <h4 style="margin-top: 1px;;">Beta Moeder unlocks Genesis 2</h4>
+            <h3>No Tributes or Artifacts required <br>Just start the mission</h3>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Corrupted_Master_Controller" target=”_blank”><h1>Corrupted Master Controller (Genesis 1)</h1></a>
+            <h4>To access the boss fight, speak to HLNA<br>Select "Arrival Protocol" option, then select a difficulty. <br><br>Anyone can enter, but the Survivor initiating the teleport <br>must have successfully completed a certain number of Missions.
+                <br><br>GAMMA: 58 missions completed.
+                <br>BETA: 116 missions completed.
+                <br>ALPHA: 168 missions completed.</h4>
+        </div>
+        <div class="column" style="padding-left: 20px;">
+            <a href="https://ark.wiki.gg/wiki/Rockwell_Prime" target=”_blank”><h1>Rockwell Prime (Genesis 2)</h1></a>
+            <h4 style="margin-top: 1px;;">Gamma Rockwell Prime unlocks Fjordur</h4>
+            <h4>To access the boss fight, start Terminus Mission<br>after meeting the following requirements: 
+                <br><br>GAMMA: - All missions completed in Gamma<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 6 Mutagen
+                <br>BETA: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- All missions completed in Beta<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 12 Mutagen
+                <br>ALPHA: &nbsp;&nbsp;- All missions completed in Alpha<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 24 Mutagen</h4>
+        </div>
+        <div class="column">
+            <a href="https://ark.wiki.gg/wiki/Fjordur" target=”_blank”><h1>Fjordur</h1></a>
+            <h4 style="margin-top: 1px;;">Last map that looks like it has all island arenas</h4>
+        </div>
+    </div>
+</body>
+</html>
